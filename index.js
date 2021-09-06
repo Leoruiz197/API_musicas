@@ -14,6 +14,6 @@ app.use('/musicas',musicasRouter);
 const usersRouter = require('./routers/users.routes');
 app.use('/user',usersRouter);
 
-app.listen(port, ()=> {
+app.listen(process.env.PORT || port, ()=> {
   console.info(`Servidor rodando na porta ${port}`);
 })
